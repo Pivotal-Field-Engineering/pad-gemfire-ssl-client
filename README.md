@@ -11,7 +11,7 @@ env:
     JAVA_OPTS: '-Djavax.net.ssl.keyStore=/home/vcap/app/BOOT-INF/classes/security/gemfireserver.jks -Djavax.net.ssl.keyStorePassword=****** -Djavax.net.ssl.trustStore=/home/vcap/app/BOOT-INF/classes/security/cacerts.keystore -Djavax.net.ssl.trustStorePassword=*****'
 ```
 
-3. system properties can then retrieve using like below
+3. system properties can then be retrieved using following code
 
 ```
 String keyStoreFilePath1=System.getProperty("javax.net.ssl.keyStore");
