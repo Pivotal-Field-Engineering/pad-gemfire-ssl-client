@@ -25,6 +25,6 @@ gemfireProperties.setProperty("ssl-keystore", keyStoreFilePath1);
 gemfireProperties.setProperty("ssl-keystore-password", keyStorePassword1);
 gemfireProperties.setProperty("ssl-truststore", trustStoreFilePath1);
 gemfireProperties.setProperty("ssl-truststore-password", trustStorePassword1);
-
-
 ```
+
+Reference: https://discuss.pivotal.io/hc/en-us/articles/223454928-How-to-tell-application-containers-running-Java-apps-to-trust-self-signed-certs-or-a-private-or-internal-CA
