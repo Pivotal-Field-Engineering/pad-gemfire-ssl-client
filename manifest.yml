@@ -1,0 +1,7 @@
+---
+applications:
+- name: gemfire-ssl-client
+  random-route: false
+  path: target/gemfire-ssl-client-0.0.1-SNAPSHOT.jar
+  env:
+    JAVA_OPTS: '-Djavax.net.ssl.keyStore=/home/vcap/app/BOOT-INF/classes/security/gemfireserver_3.jks -Djavax.net.ssl.keyStorePassword=password -Djavax.net.ssl.trustStore=/home/vcap/app/BOOT-INF/classes/security/cacerts.keystore -Djavax.net.ssl.trustStorePassword=password'
