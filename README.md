@@ -10,3 +10,21 @@
 env:
     JAVA_OPTS: '-Djavax.net.ssl.keyStore=/home/vcap/app/BOOT-INF/classes/security/gemfireserver.jks -Djavax.net.ssl.keyStorePassword=****** -Djavax.net.ssl.trustStore=/home/vcap/app/BOOT-INF/classes/security/cacerts.keystore -Djavax.net.ssl.trustStorePassword=*****'
 ```
+
+3. system properties can then retrieve using like below
+
+```
+String keyStoreFilePath1=System.getProperty("javax.net.ssl.keyStore");
+String keyStorePassword1=System.getProperty("javax.net.ssl.keyStorePassword");
+String trustStoreFilePath1=System.getProperty("javax.net.ssl.trustStore");
+String trustStorePassword1=System.getProperty("javax.net.ssl.trustStorePassword");
+
+gemfireProperties.setProperty("log-level", "config");
+gemfireProperties.setProperty("ssl-enabled-components", "server,locator");
+gemfireProperties.setProperty("ssl-keystore", keyStoreFilePath1);
+gemfireProperties.setProperty("ssl-keystore-password", keyStorePassword1);
+gemfireProperties.setProperty("ssl-truststore", trustStoreFilePath1);
+gemfireProperties.setProperty("ssl-truststore-password", trustStorePassword1);
+
+
+```
