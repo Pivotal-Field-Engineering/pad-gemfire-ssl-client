@@ -1,4 +1,4 @@
-# pad-gemfire-ssl-client
+<h1> VMware has ended active development of this project, this repository will no longer be updated.</h1><br># pad-gemfire-ssl-client
 
 1. We need to place the keystore and truststore on the classpath. They will be available in following path on PCF container
     /home/vcap/app/BOOT-INF/classes/
